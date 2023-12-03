@@ -1,10 +1,10 @@
 
-import UseState2 from "./components/useState2"
+import UseReducer from "./components/useReducer"
 
 function App(){
 return(
   <>
-  <UseState2 />
+  <UseReducer />
   </>
 )
 
