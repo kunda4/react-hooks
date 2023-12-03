@@ -1,18 +1,13 @@
 
-import { useState } from "react"
+import UseState2 from "./components/useState2"
 
-function App() {
+function App(){
+return(
+  <>
+  <UseState2 />
+  </>
+)
 
-  const [count, setCount] = useState(0)
-  return (
-    <section className="flex justify-center items-center h-screen">
-      <span className='text-2xl pb-24'>{count}</span>
-      <div className="flex gap-2">
-        <button className="border border-gray-400 rounded-xl px-2 bg-gray-200" onClick={()=>setCount(count-1)}>Decrement</button>
-        <button className="border border-gray-400 rounded-xl px-2 bg-gray-200" onClick={()=>setCount(count+1)}>Increment</button>
-      </div>
-    </section>
-  );
 }
 
 export default App
