@@ -10,18 +10,18 @@ function reducer(state,action){
             return state
     }
 }
-export default function UseReducer(){
+export default function UseReducer2(){
 
     const [state, dispatch] = useReducer(reducer, {count:0, showText:false})
 
     return(
-      <section className="flex flex-col">
+      <section className="flex flex-col justify-center items-center h-screen gap-6">
         <span>{state.count}</span>
-        <button onClick={()=> {
+        {state.showText&&<span>This is the Text</span>}
+        <button className="border-gray-300 border-2 rounded-lg px-2 bg-gray-200 mt-10" onClick={()=> {
             dispatch({type: "Increment"})
             dispatch({type: "ShowText"})
         }}>Show Text</button>
-        {state.showText&&<span>This is the Text</span>}
       </section>
     )
 }
